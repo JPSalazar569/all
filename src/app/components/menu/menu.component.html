@@ -1,0 +1,43 @@
+<ng-template #content let-offcanvas>
+	<div class="offcanvas-header">
+		<h4 class="offcanvas-title" id="offcanvas-basic-title">Menu</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<div class="offcanvas-body">
+        <div class="mb-3">
+            
+        </div>
+		<form>
+			<div class="mb-3">
+				<label for="dateOfBirth">Date of birth</label>
+				<div class="input-group">
+					<input
+						id="dateOfBirth"
+						class="form-control"
+						placeholder="yyyy-mm-dd"
+						name="dp"
+						ngbDatepicker
+						#dp="ngbDatepicker"
+					/>
+					<button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button">x</button>
+				</div>
+			</div>
+		</form>
+		<div class="mb-3">
+            <button routerLink="agenda">Agenda</button>
+		</div>
+		<div class="mb-3">
+			<button routerLink="asignar">Asignar cita</button>
+		</div>
+		<div class="mb-3">
+			<button routerLink="listar">Listar</button>
+		</div>
+	</div>
+</ng-template>
+
+<!--boton encargado de abrir el menu-->
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)"><i class="bi bi-menu-button-wide-fill"></i></button>
+
+<hr />
+
+<pre>{{ closeResult }}</pre>

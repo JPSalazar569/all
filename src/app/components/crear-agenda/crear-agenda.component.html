@@ -1,0 +1,50 @@
+<form class="formularioA">
+    <div class="mb-3">
+        <label>Nombres</label>
+        <input type="text" id="nombres" class="form-control" placeholder="Nombres"/>
+    </div>
+    <div class="mb-3">
+        <label>Apellidos</label>
+        <input type="text" class="form-control"  placeholder="Apellidos" name="apellidos"/>
+    </div>
+    <div class="mb-3">
+        <label for="">Contacto</label>
+        <input type="text" class="form-control"  placeholder="Contacto" name="contacto"/>
+    </div>
+    <label for="">Fecha</label>
+    <div class="mb-3">
+        <input id="asignarFecha" class="form-control"  placeholder="yyyy-mm-dd" name="dp"	ngbDatepicker #dp="ngbDatepicker" name="fecha"/>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-warning lg" (click)="validarData()">Crear</button>
+    </div>
+</form>
+
+<div class="container">
+    <h1>Agendece</h1>
+    <form action="">
+        <div class="form-control">
+            <input type="text" required>
+            <label for="">Nombres</label>
+        </div>
+        <div class="form-control">
+            <input type="text" required>
+            <label for="">Apellidos</label>
+        </div>
+        <div class="form-control">
+            <input type="text" required>
+            <label for="">Contacto</label>
+        </div>
+        <div class="form-control">
+            <input id="asignarFecha" class="form-control"  placeholder="yyyy-mm-dd" name="dp"	ngbDatepicker #dp="ngbDatepicker" name="fecha"/>
+            <label for="">Fecha</label>
+        </div>
+        <div class="form-control">
+            <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
+        </div>
+        <button type="submit" class="btn btn-warning lg" (click)="validarData()">Crear</button>
+    </form>
+</div>
